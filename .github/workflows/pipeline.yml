@@ -28,7 +28,7 @@ jobs:
 
       - name: Rodar os testes
         env:
-          PYTHONPATH: ${{ github.workspace }}
+          PYTHONPATH: .
         run: python -m pytest -v
 
   codeql:
