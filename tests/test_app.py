@@ -1,8 +1,8 @@
-import sys
 import os
+import sys
 
-# Adiciona a raiz do repositório ao caminho do Python
-sys.path.insert(0, os.getcwd())
+# Adiciona a pasta raiz do projeto ao caminho de importação do Python
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(_file_), '..')))
 
 from app import app
 
