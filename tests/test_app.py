@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Adiciona a raiz do repositório ao caminho do Python
+sys.path.insert(0, os.getcwd())
+
 from app import app
 
 def test_home():
