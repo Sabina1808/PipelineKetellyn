@@ -10,6 +10,11 @@ def inicio():
     return jsonify(mensagem="Olá, Fatec! A pipeline está funcionando.")
 
 
+@app.get("/saude")
+def saude():
+    return jsonify(status="ok")
+
+
 @app.get("/alunos")
 def listar_alunos():
     busca = request.args.get("nome", "").lower()
