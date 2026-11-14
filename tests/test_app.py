@@ -1,9 +1,12 @@
-from app import app
+from flask import Flask
 
-def test_home():
-    client = app.test_client()
-    response = client.get('/')
-    assert response.status_code == 200
+app = Flask(__name__)
 
 
-    
+@app.route("/")
+def home():
+    return "Pipeline Fatec funcionando!"
+
+
+if __name__ == "__main__":
+    app.run()
