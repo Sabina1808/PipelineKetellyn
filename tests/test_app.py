@@ -11,3 +11,8 @@ def test_busca_de_alunos_por_nome():
     resposta = app.test_client().get("/alunos?nome=an")
     assert resposta.status_code == 200
     assert resposta.get_json() == ["Ana", "Daniel"]
+
+
+def test_saude():
+    resposta = app.test_client().get("/saude")
+    assert resposta.get_json() == {"status": "ok"}
